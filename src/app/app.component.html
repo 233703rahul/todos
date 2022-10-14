@@ -1,59 +1,40 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<br><br>
 
-  <div class="container-fluid">
+ <div class="d-flex" >  <br><div style="border: 2px solid black;margin-left: 150px;" class="col-4">
 
-    <a class="navbar-brand" href="#">Navbar</a>
+   
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <label style="margin-left: 35px;">Add  Event name :</label><br>
 
-      <span class="navbar-toggler-icon"></span>
+    <input type="text" #t style="margin-left: 10px;"><br><br>
 
-    </button>
+    <label style="margin-left: 35px;">Add  Event date :</label><br>
 
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <input type="date" #d style="margin-left: 23px;"><br><br>
 
-      <ul class="navbar-nav">
+    <button type="submit" style="margin-left: 58px; background-color: rgb(112, 223, 149);" (click) ="fun(t.value,d.value)"> Submit</button><br>
 
-        <li class="nav-item">
+  <br></div><br><br><br>
 
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+  <div id="q"><table id="ans" style="margin-left: 150px; width: 400px;">
+    <tr>
 
-        </li>
+      <th>{{h}}</th>
 
-        <li class="nav-item">
+      <th>{{j}}</th>
 
-          <a class="nav-link" href="#">Features</a>
+    </tr>
 
-        </li>
+    <tr *ngFor="let items of a, index as i" >
 
-        <li class="nav-item">
+       <td>{{a[i].t}}</td>
 
-          <a class="nav-link" href="#">Pricing</a>
+       <td>{{b[i].d}}</td>
 
-        </li>
+       <td><button type="submit" style=" background-color: rgb(112, 223, 149);" (click) ="delete1(i)"> Delete</button></td>
 
-        <li class="nav-item dropdown">          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ 
 
-          Dropdown link
+    </tr>
 
-        </a>
-
-        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-
-          <li><a class="dropdown-item" href="#">Action</a></li>
-
-          <li><a class="dropdown-item" href="#">Another action</a></li>
-
-          <li><a class="dropdown-item" href="#">Something else here</a></li>
-
-        </ul>
-
-      </li>
-
-    </ul>
-
-  </div>
-
-</div>
-
-</nav>
+  </table></div></div>
